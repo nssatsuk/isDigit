@@ -2,21 +2,15 @@ package by.itAcademy.satsuk.isDigit;
 
 public class IsDigit {
     public static void main(String[] args) {
-        String str1 = "123456789 ";
+        String str1 = "123456789";
+        String str2 = "1234567 89";
+        String str3 = "123qwe";
+        String str4 = "QWE";
 
-        boolean isDigit1 = true;
-
-        for (int i = 0; i < str1.length(); i++) {
-            if (!Character.isDigit(str1.charAt(i))) {
-                isDigit1 = false;
-                break;
-            }
-        }
-        if(isDigit1){
-            System.out.println("Строка содержит только цифры");
-        } else {
-            System.out.println("Строка содержит не только цифры");
-        }
+        System.out.println(DigitChecker.containsOnlyDigits(str1));
+        System.out.println(DigitChecker.containsOnlyDigits(str2));
+        System.out.println(DigitChecker.containsOnlyDigits(str3));
+        System.out.println(DigitChecker.containsOnlyDigits(str4));
 
     }
 }
